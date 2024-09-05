@@ -1,14 +1,4 @@
-# Linear-Model-Regression-and-Classification-
-
-A financial institution is launching a stock market trading service for its existing account holders. While the service is costly due to infrastructure, licensing, and personnel expenses, the institution plans to generate profit by charging a commission on trade transactions. However, since this service is also offered by competitors—sometimes at lower commission rates—the institution aims to attract and retain heavy traders by offering discounts. 
-
-The challenge is that offering discounts across the board could reduce profits from customers who don't trade in large volumes. To address this, the institution wants to selectively offer discounts to customers who are likely to be heavy traders (i.e., generate significant revenue). 
-
-To achieve this, they conducted a beta run with around 10,000 customers, manually categorizing them into two revenue categories: 
-a. Revenue Category 1: Customers who are profitable (heavy traders) and should receive discounts.
-b. Revenue Category 2: Customers who should not receive discounts to maintain profitability.
-
-The goal is to use this data to build a predictive model that can identify whether a customer is likely to fall into Revenue Category 1 and, therefore, be eligible for discounts.
+# Linear-Model.
 
 For Regression:
 
@@ -24,21 +14,55 @@ Model Building: I used linear regression, a fundamental yet powerful statistical
 
 Model Evaluation: The performance of our model was evaluated using metrics like mean squared error (MSE) and R-squared, ensuring it provides reliable predictions.
 
+Dataset used: ld_test.csv and ld_train.csv
 
 Classification:
 
+Problem: A financial institution is launching a stock market trading service for its existing account holders. While the service is costly due to infrastructure, licensing, and personnel expenses, the institution plans to generate profit by charging a commission on trade transactions. However, since this service is also offered by competitors—sometimes at lower commission rates—the institution aims to attract and retain heavy traders by offering discounts. 
+
+The challenge is that offering discounts across the board could reduce profits from customers who don't trade in large volumes. To address this, the institution wants to selectively offer discounts to customers who are likely to be heavy traders (i.e., generate significant revenue). 
+
+To achieve this, they conducted a beta run with around 10,000 customers, manually categorizing them into two revenue categories: 
+a. Revenue Category 1: Customers who are profitable (heavy traders) and should receive discounts.
+b. Revenue Category 2: Customers who should not receive discounts to maintain profitability.
+
+The goal is to use this data to build a predictive model that can identify whether a customer is likely to fall into Revenue Category 1 and, therefore, be eligible for discounts.
+
+
 Approach:
+- Data Collection & Preprocessing
+  - Data from 10,000 customers, manually labeled into Revenue Category 1 or 2.
+  - Handle missing data and encode categorical variables.
+  - Scale numerical features for better model performance.
 
-Building a Predictive Model Using Classification for Loan Interest Rates.
-Given the same test and train dataset of loan applications, including various applicant details, our task was to build a model that can predict the interest rate a peer-to-peer lending platform might offer. This predictive capability can help improve decision-making and offer more personalized loan products.
+- Feature Engineering:
+  - Create features such as:
+    - Total trading volume.
+    - Number and frequency of trades.
+    - Account tenure.
+    - Assets under management (AUM).
+    - Previous service engagement.
+    - Demographics (age, income, etc.).
 
-Approach:
-I used classification techniques to build a linear model. By analyzing the relationship between the applicant's details (features) and the interest rate offered (target), we trained the model to understand patterns and make accurate predictions.
+- Model Selection:
+  - Logistic regression chosen for binary classification (Revenue Category 1 or 2).
+  - Probabilistic outputs allow threshold-based decision-making.
+  - Provides interpretability through feature coefficients.
 
-Insights Gained:
+- Training the Logistic Regression Model:
+  - Split data into training and test sets (e.g., 80% training, 20% test).
+  - Apply regularization (L1 or L2) to prevent overfitting.
 
-a. Data preprocessing and feature engineering played a key role in enhancing model accuracy.
+- Model Evaluation:
+  - Assess accuracy on the test set.
+  - Focus on precision, recall, and F1-score for business impact.
+  - Analyze the confusion matrix for true positives, false positives, etc.
+  - Evaluate with ROC curve and AUC score for classification performance.
 
-b. Regularization techniques like Ridge and Lasso helped us avoid overfitting, ensuring that the model performs well on unseen data.
+- Threshold Tuning:
+  - Adjust decision threshold to optimize precision (minimize incorrect discounts) and recall (maximize heavy traders captured).
 
-c. The model's predictions can potentially streamline the loan approval process, making it more efficient and fair for applicants.
+- Model Interpretability:
+
+
+Dataset used: bd_test.csv, bd_train.csv
