@@ -16,6 +16,8 @@ Model Evaluation: The performance of our model was evaluated using metrics like 
 
 Dataset used: ld_test.csv and ld_train.csv
 
+
+
 Classification:
 
 Problem: A financial institution is launching a stock market trading service for its existing account holders. While the service is costly due to infrastructure, licensing, and personnel expenses, the institution plans to generate profit by charging a commission on trade transactions. However, since this service is also offered by competitors—sometimes at lower commission rates—the institution aims to attract and retain heavy traders by offering discounts. 
